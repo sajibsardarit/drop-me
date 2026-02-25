@@ -1,5 +1,15 @@
-import { SignIn } from '@clerk/nextjs'
+import { SignIn } from "@clerk/nextjs";
+import Image from "next/image";
 
 export default function Page() {
-  return <SignIn />
+  return(
+    <div>
+      <Image src='/drop-me-banner.png' alt="banner" width={900} height={1000}
+      className="object-contain h-full w-full"></Image>
+      <div className="absolute top-20 right-0">
+        <SignIn />
+      </div>
+    </div>
+  );
+  
 }
